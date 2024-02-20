@@ -1,0 +1,12 @@
+<h1><%= @task.title%></h1> <p><%= link_to "Edit", task_edit_path(@task) %></p>
+<div class="card my-3">
+  <div class="card-body m-3">
+    <h4><%= @task.details%></h4>
+  </div>
+</div>
+
+<%= @task.completed ? "✅ this task is completed" : "🔲 you still need to do this task" %>
+
+<hr>
+
+<%= link_to "Back to all tasks", tasks_path %>
